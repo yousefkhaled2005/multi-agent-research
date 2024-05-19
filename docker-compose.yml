@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  research-agent:
+    build: .
+    container_name: multi_agent_research_api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+    restart: unless-stopped
